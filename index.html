@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction HTML - CSS | Formation HTML - CSS</title>
+    <!-- Commentaire en HTML -->
+    <!-- 
+    C'est dans la partie head que l'on va aussi déclarer :  
+        * Des meta supplémentaires pour le référencement
+        * les liens vers les fichiers CSS de style du document
+        * les liens vers les fichiers scripts (par exemple javascript)
+    -->
+</head>
+<!-- Une seule balise body par page -->
+
+<body>
+    <header role="banner">
+        <div>
+            <span>Formation HTML - CSS</span>
+        </div>
+    </header>
+    <nav role="navigation">
+        <div>
+            <ul>
+                <li><a href="./index.html" title="Introduction HTML - CSS" aria-current="page"
+                        target="_self">Introduction HTML - CSS</a></li>
+                <li><a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a></li>
+                <li><a href="./formulaire.html" title="Les formulaire en HTML - CSS" target="_self">Contact</a></li>
+                <li><a href="./adaptatif.html" title="Le CSS Adaptatif" target="_self">CSS Adaptatif</a></li>
+                <li><a href="./animations.html" title="Les animations en HTML - CSS" target="_self">Animations</a></li>
+                <li><a href="./bootstrap.html" title="Le framework CSS bootstrap" target="_self">Bootstrap</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- La balise main ne doit apparaître qu'une seule fois par document HTML -->
+    <main>
+        <header>
+            <!-- l'élément de titre h1 ne doit apparaître qu'une fois par document HTML -->
+            <h1>Introduction HTML - CSS</h1>
+        </header>
+        <!-- L'aside permet de créer du contenu dont la pertinence est satellite au contenu principal -->
+        <aside>
+            <span>Table des matières</span>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#bases-en-html" title="Aller à la section Bases HTML">Bases en HTML</a>
+                        <ul>
+                            <li><a href="#balises-de-contenu-de-texte"
+                                    title="Aller à la section balises de texte">Balises de contenu de texte</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#bases-en-css" title="Aller à la section Bases CSS">Bases en CSS</a></li>
+                    <li><a href="#" title="Aller à la section "></a></li>
+                    <li><a href="#" title="Aller à la section "></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- On divise le sujet "Introduction au HTML - CSS en deux partie distincte en utilisant les section" -->
+        <section>
+            <h2 id="bases-en-html">Bases en HTML</h2>
+            <h3 id="balises-de-contenu-de-texte">Balises de contenu de texte</h3>
+            <article>
+                <h4>Les paragraphes</h4>
+                <p>
+                    Les paragraphes séparent les blocs de texte à la verticale, mais s'il faut faire un retour
+                    chariot à l'intérieur de celui-ci, il faut utiliser la balise br : <br />
+                    Elle permet un retour à la ligne dans le flux du texte du paragraphe.
+                </p>
+                <h5>Exemple paragraphes et retours chariot</h5>
+                <p>
+                    Mon petit garçon
+                </p>
+                <p>
+                    n'est pas à l'école, <br />Donc je dois télétravailler
+                </p>
+            </article>
+            <article>
+                <h4>Les listes non-ordonnées</h4>
+                <ul>
+                    <li>élément de liste</li>
+                    <li>
+                        élément de liste
+                        <ul>
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste</li>
+                            <li>
+                                élément de sous-liste
+                                <ul>
+                                    <li>élément de sous-sous-liste</li>
+                                    <li>élément de sous-sous-liste</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>élément de liste</li>
+                </ul>
+            </article>
+            <article>
+                <h4>Les listes ordonnées</h4>
+                <ol>
+                    <li>élément de liste</li>
+                    <li>
+                        élément de liste
+                        <ol type="I">
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste</li>
+                            <li>
+                                élément de sous-liste
+                                <ol type="a">
+                                    <li>élément de sous-sous-liste</li>
+                                    <li>élément de sous-sous-liste</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>élément de liste</li>
+                </ol>
+                <p>
+                    Je dois couper la liste pour une information qui ne tient pas dans un élément de liste
+                </p>
+                <ol start="4">
+                    <li>élément de liste</li>
+                </ol>
+            </article>
+            <article>
+                <h4>Les listes descriptive</h4>
+                <dl>
+                    <dt>Terme a décrire</dt>
+                    <dd>Description du terme</dd>
+
+                    <dt>Second terme a décrire</dt>
+                    <dd>Description du second terme</dd>
+                </dl>
+                <h5>Exemple concret</h5>
+                <dl>
+                    <dt>Paris</dt>
+                    <dd>Capitale de la France</dd>
+                    
+                    <dt>Lyon</dt>
+                    <dd>Centre Bocuse</dd>
+                    
+                    <dt>Lille</dt>
+                    <dd>"Les gens du nord ont dans leur yeux le bleu qui manque à leur décors"</dd>
+                </dl>
+            </article>
+        </section>
+        <section>
+            <h2 id="bases-en-CSS">Bases en CSS</h2>
+        </section>
+    </main>
+    <footer>
+        <div>
+            &copy; DAWAN - 2026
+        </div>
+    </footer>
+</body>
+
+</html>
