@@ -1,0 +1,196 @@
+/*
+Commentaire en CSS
+
+CSS => cascading style sheet ou Feuille de style en cascade
+
+La cascade 
+
+Le principe de base est : si on déclare du CSS pour un élément, la quasi totalité des éléments à l'intérieur vont appliquer ce style par HÉRITAGE
+
+En revanche, si un style est défini en particulier (soit par défaut navigateur, soit pas des déclaration CSS du fichier), les éléments dans ce cas-ci n'appliqueront pas leur héritage.
+
+Unités de tailles en CSS (en web)
+
+Unités les plus souvent utilisées en web
+
+px      =>  pixel il est possible de mesure avec des virgules, 23.8px)
+em      =>  cadratin. Historiquement unité de mesure en print sur les presses.
+            Le cadratin se calcul par rapport à la taille du parent
+rem     =>  cadratin racine, lui se calculera toujours depuis la taille racine du cadratin, 
+            - soit celle du navigateur 
+            - soit celle surchargée dans le :root
+%       =>  La taille définie en % se calcule par rapport à l'espace disponible autour de l'élément définie en %
+vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil)
+            vh : viewport height ( hauteur d'affichage de l'appareil)
+            50vh => 50% de la taille d'affichage du l'appareil
+            si la largeur d'affichage du site 360px (100vw)
+            50vw = 180px
+
+Les sélecteurs CSS
+
+Pour appliquer des propriétés CSS (du style) sur des éléments et les éléments à l'intérieur, il faut indiquer au navigateurs quels sont es élément en utilsants un Sélecteur CSS.
+
+# => sélécteur d'élément avec un id défini
+    ATTENTION : Les id d'une page doivent être UNIQUES
+    Ex : <h3 id="mise-a-zero-du-css">Mise à zéro du CSS</h3>
+
+    Sélécteur : 
+        #mise-a-zero-du-css{
+            -- CSS
+        }
+
+. => sélécteur par nom de classe
+    Ex : <span class="danger">code</span>
+
+    Sélécteur : 
+    .danger{
+        -- CSS
+    }
+
+balise => Sélécteur par nom de balise
+
+    Ex : <h1>Titre</h1>
+
+    Sélécteur : 
+    h1{
+        -- CSS
+    }
+
+    L'abbreviation emmet fonctionne comme ça : 
+
+    
+ET maintenant, on mélange TOUT !
+il existe un norme dans l'écriture des sélécteurs (l'abbreviation emmet utilise cette norme)
+
+un élément particulier utilisant une classe particulière
+
+span.danger => tout les éléments span ayant au moins la classe danger
+
+    Quand le sélecteur de class .classe est "collé" à l'élément, cela veux dire que la classe est écrite dans l'attribut class de l'élément
+    <span class="danger"></span>
+
+span.danger.titi => <span class="titi danger tutu"></span> un élément span ayant au moins la class danger ET la class titi dans l'attribut class
+
+Il est possible aussi de désigner par "filiation"
+
+main section => dans un élément main, tous les descendants de type section
+
+<main>
+    <section>
+    Corresponds au sélecteur
+        <section>
+            Corresponds au sélecteur
+        </section>
+        <section>
+            Corresponds au sélecteur
+        </section>
+    </section>
+</main>
+
+main > section => dans un élément main, tous les descendants directs type section
+
+<main>
+    <section>
+        Corresponds au sélecteur
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+    </section>
+    <section>
+        Corresponds au sélecteur
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+    </section>
+</main>
+
+article.news p => tous les descendant p d'un élément article ayant au moins la classe news
+
+Sélécteur "magique"
+
+* => tous les éléments de la page
+
+Pseudo-selecteurs
+
+Il existe des "espace" compris entre le contenu et le début d'une balise, le avant (::before) et le après (::after) dans lequel on peut déclarer du contenu (propriété content), des police de caractère pour ce contenu
+
+q::before, q::after{
+    color: #333;
+    font-family: Impact;
+    content: '<>';
+}
+
+Pseudo-classes 
+
+Certains éléments changent "d'état" dans leurs utilisation, par exemple, quand la souris passe "au dessus" (survol), un élément est dans l'état "survolé" :hover
+
+q:hover{
+    color: red;
+    background-color: black;
+}
+
+quand un élément q est survolé, la police de caractère devient rouge et la couleur de fond passe au noir.
+
+*/
+/* Imports de CSS */
+
+
+/* Déclarations du :root */
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.7rem;
+}
+
+/* Déclarations générales */
+
+*{
+    box-sizing: border-box;
+}
+
+/* Déclaration de classes */
+
+.danger{
+    font-size: large;
+    font-family: 'Impact';
+    color: darkred;
+}
+
+.exemple-position{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 1rem;
+    position: relative;
+}
+/* Principe du D.R.Y. ou Don't Repeat Yrouself : on "factorise" on regroupe les élément ayant les mêmes déclarations */
+
+.carre-ex{
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+}
+
+.carre-rouge{
+    background-color: darkred;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.carre-vert{
+    background-color: darkgreen;
+}
+
+/* Déclaration selon la structure de la page */
+
+
+
+/* Déclarations pour l'adaptatif */

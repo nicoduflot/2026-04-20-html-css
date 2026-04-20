@@ -12,6 +12,7 @@
         * les liens vers les fichiers CSS de style du document
         * les liens vers les fichiers scripts (par exemple javascript)
     -->
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <!-- Une seule balise body par page -->
 
@@ -24,8 +25,7 @@
     <nav role="navigation">
         <div>
             <ul>
-                <li><a href="./index.html" title="Introduction HTML - CSS" aria-current="page"
-                        target="_self">Introduction HTML - CSS</a></li>
+                <li><a href="./index.html" title="Introduction HTML - CSS" aria-current="page" target="_self">Introduction HTML - CSS</a></li>
                 <li><a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a></li>
                 <li><a href="./formulaire.html" title="Les formulaire en HTML - CSS" target="_self">Contact</a></li>
                 <li><a href="./adaptatif.html" title="Le CSS Adaptatif" target="_self">CSS Adaptatif</a></li>
@@ -56,9 +56,12 @@
                                     de texte</a></li>
                         </ul>
                     </li>
-                    <li><a href="#bases-en-css" title="Aller à la section Bases CSS">Bases en CSS</a></li>
-                    <li><a href="#" title="Aller à la section "></a></li>
-                    <li><a href="#" title="Aller à la section "></a></li>
+                    <li>
+                        <a href="#bases-en-css" title="Aller à la section Bases CSS">Bases en CSS</a>
+                        <ul>
+                            <li><a href="#mise-a-zero-du-css">Mise à "zéro" du CSS</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -356,10 +359,21 @@
                 <p>
                     2em
                 </p>
-
+                <div style="font-size: 2em; border: 1px solid black;margin: 10px;">
+                    2em
+                    <div style="font-size: 2em; border: 1px solid black;margin: 10px;">
+                        2em
+                    </div>
+                </div>
                 <p>
                     2rem
                 </p>
+                <div style="font-size: 2rem; border: 1px solid black;margin: 10px;">
+                    2rem
+                    <div style="font-size: 2rem; border: 1px solid black;margin: 10px;">
+                        2rem
+                    </div>
+                </div>
             </article>
             <article>
                 <h4>Dimension web et CSS</h4>
@@ -369,8 +383,8 @@
                 <p>
                     le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
                 </p>
-
-
+                <div style="box-sizing: content-box;width: 200px; height: 100px; border: 1px solid black; padding: 10px;margin: 10px;"></div>
+                <div style="box-sizing: border-box;width: 200px; height: 100px; border: 1px solid black; padding: 10px;margin: 10px;"></div>
             </article>
             <article>
                 <h4>Les positions</h4>
@@ -396,9 +410,11 @@
                     <li>
                         sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défilement vers le bas, bougera jusqu'à la disparition du viewport de l'élément parent, ensuite, il reste en haut du viewport avec le décalage indiqué par rapport à son élément parent.
                     </li>
-
-
                 </ul>
+                <div class="exemple-position">
+                    <div class="carre-ex carre-rouge"></div>
+                    <div class="carre-ex carre-vert"></div>
+                </div>
             </article>
         </section>
     </main>
