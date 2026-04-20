@@ -289,9 +289,6 @@
                     </tr>
                 </table>
             </article>
-        </section>
-        <section>
-            <h2 id="bases-en-CSS">Bases en CSS</h2>
             <h3 id="balises-modification-de-texte">Balises modification de texte</h3>
             <article>
                 <h4>Taille, police et couleur</h4>
@@ -316,9 +313,92 @@
                 <h4>Le gras et l'italique</h4>
                 <p>
                     Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui ne
-                    servent qu'à attirer l'attention du lecteur sont &lt;b&gt; <b>pour le gras</b> et &lt;i&gt; <i>pour l'italique</i>.<br />
-                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le référencement, on utilisera &lt; strong&gt; <strong>pour le gras</strong> et l'importance sémantique sur la force du terme et &lt;em&gt; <em>pour l'italique</em> et ajouter de l'emphase à la sémantique du terme.
+                    servent qu'à attirer l'attention du lecteur sont &lt;b&gt; <b>pour le gras</b> et &lt;i&gt; <i>pour
+                        l'italique</i>.<br />
+                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le
+                    référencement, on utilisera &lt; strong&gt; <strong>pour le gras</strong> et l'importance sémantique
+                    sur la force du terme et &lt;em&gt; <em>pour l'italique</em> et ajouter de l'emphase à la sémantique
+                    du terme.
                 </p>
+            </article>
+            <article>
+                <h4>D'autres éléments de mise en forme</h4>
+                <p>
+                    A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour
+                    cela qu'il est toujours possible de <u>souligner</u>, <s>de biffer</s> ou de <mark>surligner au fluo
+                        du texte</mark>.<br />
+                    On ne souligne jamais en HTML, car les utilisateurs pourraient penser qu'il s'agit d'un hyperlien,
+                    et se dire qu'il s'agit d'un lien cassé.
+                </p>
+                <p>
+                    Une surface de 45m<sup>2</sup><br />
+                    Un volume de 3m<sup>3</sup><br />
+                    De l'acide sulfurique en oxydo-réduction H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>&#x21CC;
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2 id="bases-en-css">Bases en CSS</h2>
+            <h3 id="mise-a-zero-du-css">Mise à "zéro" du CSS</h3>
+            <article>
+                <h4>Les polices caractères</h4>
+                <p>
+                    La police par défaut des navigateurs est faîte pour de l'impression directe, avec empâtement (type Times New Roman), en revanche, sur des écran rétro-éclairés il sera plus confortable d'utiliser une police sans empâtement (type arial ou helvetica)
+                </p>
+                <h5>Les tailles de polices et le problème du em</h5>
+                <p>
+                    Le em représente la taille par défaut d'une police sur la page dans un paragraphe.<br />
+                    Quand on utilise par exemple h1, la taille généralement appliquée par le navigateur est de 2 fois le cadratin
+                </p>
+                <p>
+                    Mais le em pose problème : il se calcule par rapport à la taille de la police du parent le plus proche.
+                </p>
+                <p>
+                    2em
+                </p>
+
+                <p>
+                    2rem
+                </p>
+            </article>
+            <article>
+                <h4>Dimension web et CSS</h4>
+                <p>
+                    Par défaut dans le css user agent (css du navigateur), quand on donne une taille (hauteur ou largeur) à un élément, la taille est calculée par rapport au contenu de l'élément, c'est à dire qu'elle ne prend pas en compte la taille des marges intérieures (padding) ou de la largeur des bordures.
+                </p>
+                <p>
+                    le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
+                </p>
+
+
+            </article>
+            <article>
+                <h4>Les positions</h4>
+                <p>
+                    La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont déclarés dans le fichier HTML.
+                </p>
+                <p>
+                    les valeurs :
+                </p>
+                <ul>
+                    <li>
+                        static : par défaut pour les éléments
+                    </li>
+                    <li>
+                        Relative : l'élément est à sa position déclarée mais peut être décalé à l'aide des propriétés de type top, bottom, le décalage n'a pas d'impact sur les éléments suivants
+                    </li>
+                    <li>
+                        absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou "en-dessous". Les propriétés de type top, bottom... le placeront par rapport son ancètre le plus proche ayant la position relative.
+                    </li>
+                    <li>
+                        fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou "en-dessous". Il est positionné par rapport au viewport et ne bougera pas quel que soit le défilement de la page.
+                    </li>
+                    <li>
+                        sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défilement vers le bas, bougera jusqu'à la disparition du viewport de l'élément parent, ensuite, il reste en haut du viewport avec le décalage indiqué par rapport à son élément parent.
+                    </li>
+
+
+                </ul>
             </article>
         </section>
     </main>
