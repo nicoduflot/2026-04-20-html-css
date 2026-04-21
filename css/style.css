@@ -294,9 +294,46 @@ figure.media-legend figcaption{
     border-radius: calc(var(--gouttiere) / 2) ;
 }
 
+.btn{
+    margin: calc( var(--gouttiere) /2);
+    padding: calc( var(--gouttiere) /2);
+    border: 2px solid transparent;
+    border-radius: calc( var(--gouttiere) /2);
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:focus-visible{
+    opacity: 0.8;
+}
+
 .message-info{
     border-color: var(--info-border-color);
     background-color: var(--info-bg-color);
+}
+.message-light{
+    border-color: var(--light-border-color);
+    background-color: var(--light-bg-color);
+}
+.message-dark{
+    border-color: var(--dark-border-color);
+    background-color: var(--dark-bg-color);
+    color: var(--dark-color);
+}
+.message-danger{
+    border-color: var(--danger-border-color);
+    background-color: var(--danger-bg-color);
+}
+.message-success,
+.btn-success{
+    border-color: var(--success-border-color);
+    background-color: var(--success-bg-color);
+}
+
+.message-warning{
+    border-color: var(--warning-border-color);
+    background-color: var(--warning-bg-color);
 }
 
 /* Déclaration selon la structure de la page */
