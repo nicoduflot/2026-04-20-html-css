@@ -156,6 +156,24 @@ quand un élément q est survolé, la police de caractère devient rouge et la c
     --gouttiere: calc( var(--site-font-size) / 2);
     --header-bg-color: rgb(51, 51, 51);
     --header-color: rgb(255, 255, 255);
+
+    --light-bg-color: #ddd;
+    --dark-bg-color: #454545;
+    --info-bg-color: #b4d0e8;
+    --danger-bg-color: #f1aeb5;
+    --success-bg-color: #a3cfbb;
+    --warning-bg-color: #f1d3ae;
+
+    --light-border-color: #666;
+    --dark-border-color: black;
+    --info-border-color: #1583e3;
+    --danger-border-color: #ea2a3d;
+    --success-border-color: #07ca73;
+    --warning-border-color: #ec8a12;
+
+    --dark-color: white;
+
+    --darkgreen: #072620;
 }
 
 /* Déclarations générales */
@@ -267,8 +285,56 @@ figure.media-legend figcaption{
     border:none;
 }
 
+.message{
+    margin: var(--gouttiere);
+    padding: calc(var(--gouttiere) / 2) ;
+    font-size: 0.8rem;
+    font-style: italic;
+    border: 2px solid transparent;
+    border-radius: calc(var(--gouttiere) / 2) ;
+}
+
+.message-info{
+    border-color: var(--info-border-color);
+    background-color: var(--info-bg-color);
+}
+
 /* Déclaration selon la structure de la page */
 
+body{
+    margin: 0;
+}
 
+body > header,
+body > nav{
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+    padding: 10px 0;
+}
+
+body > nav ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+body > nav li{
+    border-top: 1px solid var(--header-color)
+}
+
+body > nav a,
+body > nav a:visited{
+    color: var(--header-color);
+    text-decoration: none;
+    display: block;
+}
+
+body > nav a:hover,
+body > nav a:focus,
+body > nav a:focus-visible{
+    color: var(--header-bg-color);
+    background-color: var(--header-color);
+    outline: none;
+}
 
 /* Déclarations pour l'adaptatif */
