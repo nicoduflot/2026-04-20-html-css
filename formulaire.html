@@ -36,10 +36,10 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#" title="Aller à la section "></a>
+                        <a href="#utilite" title="Aller à la section utilité">Utilité</a>
                         <ul>
-                            <li><a href="#" title="Aller à la section "></a></li>
-                            <li><a href="#" title="Aller à la section "></a></li>
+                            <li><a href="#recuperer-les-donnees" title="Aller à la section récupérer les données">Récupérer les données</a></li>
+                            <li><a href="#exemple-formulaire" title="Aller à la section xemple de formulaire">Exemple de formulaire</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -47,8 +47,8 @@
         </aside>
         <section>
             <header>
-                <h2 id="">Utilité</h2>
-                <h3 id="">Récupérer les données</h3>
+                <h2 id="utilite">Utilité</h2>
+                <h3 id="recuperer-les-donnees">Récupérer les données</h3>
                 <p>
                     Les formulaires servent a récupérer des informations pour traitement, par exemple, un serveur php qui pourra les enregistrer en fichier, en bdd, ou les envoyer par mail.
                 </p>
@@ -110,10 +110,80 @@
                     Si dans un bouton du formulaire, l'attribut type="button", cela indique au navigateur que ce bouton sert à faire autre chose, généralement un comportement développé en javascript.
                 </p>
             </article>
-            <h3 id="">Exemple de formulaire</h3>
+            <h3 id="exemple-formulaire">Exemple de formulaire</h3>
             <article>
                 <h4>Contact</h4>
+                <form method="get" action="./formulaire.html">
+                    <fieldset>
+                        <legend>Informations personnelles</legend>
+                        <p>
+                            <label for="nom">Nom :</label> <input type="text" name="nom" id="nom" required aria-describedby="info-nom" autofocus placeholder="Entrez votre nom de famille" />
+                        </p>
+                        <div id="info-nom">
+                            Veuillez entrer votre nom de famille d'usage, ce champ est obligatoire.
+                        </div>
+                        <p>
+                            <label for="email">Email :</label> <input type="email" name="email" id="email" required aria-describedby="info-email" placeholder="Entrez votre email" pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
+                        </p>
+                        <div id="info-email">
+                            Veuillez entrer un email valide, ce champ est obligatoire.
+                        </div>
+                        <p>
+                            <label for="age-legal">Votre âge :</label> <input type="number" name="age-legal" id="age-legal" required aria-describedby="info-age-legal" min="13" max="99" />
+                        </p>
+                        <div id="info-age-legal">
+                            Veuillez indiquez votre âge, l'âge légal minimum pour nous faire une demande est 13 ans, ce champ est obligatoire.
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Votre demande</legend>
+                        <p>
+                            <label for="type-demande">Type de demande</label> 
+                            <select name="type-demande" id="type-demande" required aria-describedby="info-type-demande">
+                                <option value="">Choisissez votre demande</option>
+                                <optgroup label="Options unitaires">
+                                    <option aria-label="Option unitaire 1" value="1">Option 1</option>
+                                    <option aria-label="Option unitaire 2" value="2">Option 2</option>
+                                    <option aria-label="Option unitaire 3" value="3">Option 3</option>
+                                    <option aria-label="Option unitaire 4" value="4">Option 4</option>
+                                    <option aria-label="Option unitaire 5" value="5">Option 5</option>
+                                </optgroup>
+                                <optgroup label="Regroupement d'option">
+                                    <option aria-label="Toutes sauf 1" value="6">Toutes sauf 1</option>
+                                    <option aria-label="Toutes sauf 2" value="7">Toutes sauf 2</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <div id="info-type-demande">
+                            Veuillez sélectionner le type de demande, ce champ est obligatoire
+                        </div>
+                        <p>
+                            <label>Vous représentez :</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="personne" id="physique" value="physique" checked aria-describedby="info-personne" /> 
+                            <label for="physique">Personne physique</label><br />
 
+                            <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-personne" /> 
+                            <label for="morale">Personne morale</label><br />
+                        </p>
+                        <div id="info-personne">
+                            Veuillez indiquez si vous faîte la demande en votre nom (perticulier) ou pour une personne morale (entreprise, institution, association, etc.)
+                        </div>
+                        <p>
+                            <label>Modèle de diffusion</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="diff-email" id="diff-email" value="email" aria-describedby="info-diff" /> <label for="diff-email">Emailing</label><br />
+                            <input type="checkbox" name="diff-tel" id="diff-tel" value="tel" aria-describedby="info-diff" /> <label for="diff-tel">Télé-opérateurs</label><br />
+                            <input type="checkbox" name="diff-radio" id="diff-radio" value="radio" aria-describedby="info-diff" /> <label for="diff-radio">Pub radio</label><br />
+                            <input type="checkbox" name="diff-tele" id="diff-tele" value="tele" aria-describedby="info-diff" /> <label for="diff-tele">Pub TV</label><br />
+                        </p>
+                    </fieldset>
+                    <p>
+                        <button type="submit">Envoyer</button>
+                    </p>
+                </form>
             </article>
         </section>
     </main>
