@@ -175,12 +175,82 @@
                     "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny"
                     pour l'élément vidéo.
                 </p>
+                <figure>
+                    <video class="img-fluid" id="bunny" controls muted>
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                    </video>
+                    <figcaption>
+                        <button onclick="playMedia('bunny')" class="play">Lire</button>
+                        <button onclick="pauseMedia('bunny')" class="play">pause</button>
+                        <button onclick="stopMedia('bunny')" class="play">stop</button>
+                    </figcaption>
+                </figure>
             </article>
             <h2 id="media-embarques">Les media embarqués</h2>
             <h3 id="les-cadres-de-page">Les cadres de pages</h3>
             <article>
+                <p>
+                    "embarquer" un média signifie que le media n'est pas hébergé sur le site que l'on visite mais
+                    sur un site ou hébergement spécialisé pour ce type de media.
+                </p>
                 <h4>iframe</h4>
-
+                <p>
+                    L'élément iframe permet d'inserrer une page internet dans le document, mais pas que, il est possible
+                    d'inserrer d'autres types de fichiers, par exemple des pdf ou directement des fichiers vidéos, sons,
+                    etc.
+                </p>
+                <p>
+                    L'iframe avait un ancètre, la combinaison frameset et frame.
+                </p>
+                <p>
+                    Voir un <a href="./frameset.html" title="exemple de frame et frameset">exemple</a>
+                </p>
+                <p>
+                    Exemple d'iframe
+                </p>
+                <ul>
+                    <li><a href="./exercice.html" target="documents">Exercices</a></li>
+                    <li><a href="./documents/CRAM.pdf" target="documents">Cram</a></li>
+                    <li><a href="./documents/fichier.txt" target="documents">Fichier txt</a></li>
+                </ul>
+                <iframe height="300" width="100%" src="./exercice.html" name="documents">
+                    <p>
+                        Votre navigateur ne supporte pas les cadres de page (iframe)
+                    </p>
+                </iframe>
+            </article>
+            <article>
+                <h4>Images embarquées</h4>
+                <p>
+                    Pour les images, certains fora ou réseaux sociaux ne proposent pas directement le téléversement
+                    de fichiers dans les publications des utilisateurs, alors on se tourne vers un hébergeur
+                    multimédia sur lequel on téléverse les media que l'on "embarque" ensuite sur les publication
+                    précédemment citées.
+                </p>
+                <a data-flickr-embed="true"
+                    href="https://www.flickr.com/photos/randar/54839545410/in/feed-421939-1759864408-1-72157721781624459,421939-1759857381-1-72157721781651122,421939-1759848738-1-72157721781638347"
+                    title="Starlog #4 (1977), cover by Jack Thurston" target="_blank"><img
+                        src="https://live.staticflickr.com/65535/54839545410_ff3e242da2_w.jpg" width="299" height="400"
+                        alt="Starlog #4 (1977), cover by Jack Thurston" /></a>
+                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </article>
+            <article>
+                <h4>Vidéos embarquées</h4>
+                <p>
+                    La plupart des site d'hébergement de vidéos propose un partage "intégré" en utilisant les iframes
+                </p>
+                <p>
+                    Youtube propose un partage avec une hauteur et une lageur imposée, non compatible avec les affichage smartphone en portrait
+                </p>
+                <figure class="video video-16-9">
+                    <iframe src="https://www.youtube.com/embed/RbkppIMyk40?si=O-dPS4STBuWe1XDO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <p>
+                    Dailymotion propose un partage avec un ensemble de balise et de css intégré qui permet l'affichage en adaptatif 16/9
+                </p>
+                <figure class="video video-16-9"><iframe src="https://geo.dailymotion.com/player.html?video=xa4l5aw" allowfullscreentitle="Dailymotion Video Player" allow="web-share"></iframe></figure>
+                <figure class="video video-4-3"><iframe src="https://geo.dailymotion.com/player.html?video=xa4l5aw" allowfullscreentitle="Dailymotion Video Player" allow="web-share"></iframe></figure>
             </article>
         </section>
     </main>
