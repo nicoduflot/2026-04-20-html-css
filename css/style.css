@@ -144,9 +144,18 @@ quand un élément q est survolé, la police de caractère devient rouge et la c
 /* Déclarations du :root */
 
 :root{
+    /* Il est possible de créer des variables en CSS qui seront réutilisables dans tout le document */
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 1.7rem;
+    --site-font-size: 20px;
+    font-size: var(--site-font-size);
+    /* ce facteur est le taux qui permet d'avoir une hauteur de ligne harmonieuse avec la hauteur de police de base */
+    --line-height-factor: 1.6;
+    /* la hauteur de ligne est calculé par rapport à la taille de la police multipliée par le taux de hauteur de ligne pour rendre le texte accessible */
+    --site-line-height: calc( var(--site-font-size) * var(--line-height-factor) ) ;
+    line-height: var(--site-line-height);
+    --gouttiere: calc( var(--site-font-size) / 2);
+    --header-bg-color: rgb(51, 51, 51);
+    --header-color: rgb(255, 255, 255);
 }
 
 /* Déclarations générales */
@@ -154,6 +163,7 @@ quand un élément q est survolé, la police de caractère devient rouge et la c
 *{
     box-sizing: border-box;
 }
+
 
 /* Déclaration de classes */
 
@@ -187,6 +197,50 @@ quand un élément q est survolé, la police de caractère devient rouge et la c
 
 .carre-vert{
     background-color: darkgreen;
+}
+
+.vignette-100,
+.miniature-100,
+.avatar-100{
+    width: 100px;
+    height: 100px;
+    background-color: var(--header-bg-color);
+    object-position: center center;
+}
+
+.vignette-100{
+    object-fit: cover;
+}
+
+.miniature-100{
+    object-fit: contain;
+}
+
+.avatar-100{
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.img-fluid{
+    max-width: 100%;
+}
+
+figure.media-legend{
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+    display: inline-block;
+    padding: var(--gouttiere);
+    border-radius: calc(var(--gouttiere) / 1);
+}
+
+figure.media-legend > div{
+    display: table;
+}
+
+figure.media-legend figcaption{
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
 }
 
 /* Déclaration selon la structure de la page */
