@@ -411,6 +411,61 @@ figure.media-legend figcaption{
     overflow-x: auto;
 }
 
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    height: 150px;
+}
+
+.flexbox > *{
+    height: 50px;
+}
+
+.w-25{
+    width: 25%;
+}
+
+.h-start{
+    justify-content: flex-start;
+}
+
+.h-center{
+    justify-content: center;
+}
+
+.h-end{
+    justify-content: flex-end;
+}
+
+.h-around{
+    justify-content: space-around;
+}
+
+.h-between{
+    justify-content: space-between;
+}
+
+.h-evenly{
+    justify-content: space-evenly;
+}
+
+.v-items-center{
+    align-items: center;
+}
+
+.v-self-start{
+    align-self: flex-start;
+}
+
+.v-self-center{
+    align-self: center;
+}
+
+.v-self-end{
+    align-self: flex-end;
+}
+
 /* Déclaration selon la structure de la page */
 
 body{

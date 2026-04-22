@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercices</title>
+    <link rel="stylesheet" href="./css/exercice.css" />
+
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Exercices</h1>
-        </header>
+    <!--
+    (header[role="banner"].border>div.container.border>h1>{NeoGeo})+(nav[role="navigation"].container.border>ul>li*3>a[href="#"]>{lien})+(main.container.border>section>article*4>{article $})+(footer>div.container.border>{&copy; DAWAN - 2026})
+    -->
+    <header role="banner" class="border">
+        <div class="container border">
+            <h1>NeoGeo</h1>
+        </div>
+    </header>
+    <nav role="navigation" class="container border">
+        <ul>
+            <li><a href="./reponse-grid.html">Mourad avec grille</a></li>
+            <li><a href="./adaptatif.html">Retour adaptatif</a></li>
+            <li><a href="#">lien</a></li>
+        </ul>
+    </nav>
+    <main class="container border">
+        <section>
+            <article class="border">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quam quis, illo, voluptates aperiam obcaecati beatae aut quaerat minus consequatur ullam ex quibusdam vero ut dignissimos a deserunt accusamus dolorem!
+            </article>
+            <article class="border">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quam quis, illo, voluptates aperiam obcaecati beatae aut quaerat minus consequatur ullam ex quibusdam vero ut dignissimos a deserunt accusamus dolorem!
+            </article>
+            <article class="border">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quam quis, illo, voluptates aperiam obcaecati beatae aut quaerat minus consequatur ullam ex quibusdam vero ut dignissimos a deserunt accusamus dolorem!
+            </article>
+            <article class="w-100 border">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quam quis, illo, voluptates aperiam obcaecati beatae aut quaerat minus consequatur ullam ex quibusdam vero ut dignissimos a deserunt accusamus dolorem!
+            </article>
+        </section>
     </main>
+    <footer class="border">
+        <div class="container border">&copy; DAWAN - 2026</div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,72 @@
+:root{
+    /* Il est possible de créer des variables en CSS qui seront réutilisables dans tout le document */
+    font-family: Arial, Helvetica, sans-serif;
+    --site-font-size: 20px;
+    font-size: var(--site-font-size);
+    /* ce facteur est le taux qui permet d'avoir une hauteur de ligne harmonieuse avec la hauteur de police de base */
+    --line-height-factor: 1.6;
+    /* la hauteur de ligne est calculé par rapport à la taille de la police multipliée par le taux de hauteur de ligne pour rendre le texte accessible */
+    --site-line-height: calc( var(--site-font-size) * var(--line-height-factor) ) ;
+    line-height: var(--site-line-height);
+    --gouttiere: calc( var(--site-font-size) / 2);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'vide-g'
+        'main'
+        'footer'
+        'vide-d'
+    ;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.vide-g{
+    grid-area: vide-g;
+}
+
+.vide-d{
+    grid-area: vide-d;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+
+@media screen and (min-width: 800px) {
+    body{
+        grid-template-columns: auto 80% auto ;
+        grid-template-areas: 
+            'header header header'
+            'vide-g main vide-d'
+            'footer footer footer'
+        ;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .w-100{
+        grid-column: span 3;
+    }
+}

@@ -309,6 +309,98 @@
                         </p>
                     </div>
                 </div>
+                <p>
+                    Exercices :
+                </p>
+                <ul>
+                    <li><a href="./reponse-grid.html">Exercice Mourad</a></li>
+                    <li><a href="./exercice.html">Exercice Nicolas</a></li>
+                </ul>
+            </article>
+            <article>
+                <h4>Alignement dans les flexbox</h4>
+                <p>
+                    Un élément en display flex devient une "flexbox", c'est à dire qu'elle utilise les propriétés flexibles. On a vu flex-wrap pour l'instant, mais il existe des propriétés qui permettent d'aligner les éléments à l'intérieur d'une flexbox à l'horizontal et à la verticale
+                </p>
+                <h5>Justify content</h5>
+                <p>
+                    Justifier les éléments horizontalement
+                </p>
+                <p>
+                    <b>flex-start</b>
+                </p>
+                <div class="flexbox h-start border">
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                </div>
+                <p>
+                    <b>center</b>
+                </p>
+                <div class="flexbox h-center border">
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                </div>
+                <p>
+                    <b>flex-end</b>
+                </p>
+                <div class="flexbox h-end border">
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                </div>
+                <p>
+                    <b>space-around</b>
+                </p>
+                <div class="flexbox h-around border">
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                </div>
+                <p>
+                    <b>space-between</b>
+                </p>
+                <div class="flexbox h-between border">
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                </div>
+                <p>
+                    <b>space-evenly</b>
+                </p>
+                <div class="flexbox h-evenly border">
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                </div>
+                <h5>align-items et align-self</h5>
+                <p>
+                    align-items permet d'aligner tous les éléments à l'intérieur d'une flexbox
+                </p>
+                <p>
+                    <code>align-items: center;</code>
+                </p>
+                <div class="flexbox h-evenly v-items-center border">
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                    <div class="w-25 border"></div>
+                </div>
+                <p>
+                    flexbox : <code>align-items: center;</code><br />
+                    éléments : <code>align-self</code>
+                </p>
+                <div class="flexbox h-evenly border">
+                    <div class="w-25 v-self-start border">
+                        <code>align-self: flex-start</code>
+                    </div>
+                    <div class="w-25 v-self-center border">
+                        <code>align-self: center</code>
+                    </div>
+                    <div class="w-25 v-self-end border">
+                        <code>align-self: flex-end</code>
+                    </div>
+                </div>
             </article>
         </section>
     </main>
