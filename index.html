@@ -18,12 +18,12 @@
 
 <body>
     <header role="banner">
-        <div>
+        <div class="container">
             <span>Formation HTML - CSS</span>
         </div>
     </header>
     <nav role="navigation">
-        <div>
+        <div class="container">
             <ul>
                 <li><a href="./index.html" title="Introduction HTML - CSS" aria-current="page" target="_self">Introduction HTML - CSS</a></li>
                 <li><a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a></li>
@@ -35,7 +35,7 @@
         </div>
     </nav>
     <!-- La balise main ne doit apparaître qu'une seule fois par document HTML -->
-    <main>
+    <main class="container">
         <header>
             <!-- l'élément de titre h1 ne doit apparaître qu'une fois par document HTML -->
             <h1>Introduction HTML - CSS</h1>
@@ -179,7 +179,8 @@
             </article>
             <article>
                 <h4>Les tableaux</h4>
-                <table border="1">
+                <div class="table-responsive">
+                <table>
                     <caption>Exemple de tableau complet</caption>
                     <thead>
                         <tr>
@@ -238,6 +239,7 @@
                         </tr>
                     </tfoot>
                 </table>
+                </div>
                 <p>
                     Tableau plus simple
                 </p>
@@ -419,7 +421,7 @@
         </section>
     </main>
     <footer>
-        <div>
+        <div class="container">
             &copy; DAWAN - 2026
         </div>
     </footer>

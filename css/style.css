@@ -224,8 +224,25 @@ textarea{
     height: 25vh;
 }
 
+table{
+    border-collapse: collapse;
+}
+
+table tr{
+    border-bottom: 1px solid var(--light-bg-color);
+}
+
+table th, table td{
+    padding: calc( var(--gouttiere) / 2 );
+}
 
 /* Déclaration de classes */
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .danger{
     font-size: large;
@@ -351,36 +368,47 @@ figure.media-legend figcaption{
 }
 
 .message-info,
-.btn-info{
+.btn-info,
+.table-info tr{
     border-color: var(--info-border-color);
     background-color: var(--info-bg-color);
 }
 .message-light,
-.btn-light{
+.btn-light,
+.table-light tr{
     border-color: var(--light-border-color);
     background-color: var(--light-bg-color);
 }
 .message-dark,
-.btn-dark{
+.btn-dark,
+.table-dark tr{
     border-color: var(--dark-border-color);
     background-color: var(--dark-bg-color);
     color: var(--dark-color);
 }
 .message-danger,
-.btn-danger{
+.btn-danger,
+.table-danger tr{
     border-color: var(--danger-border-color);
     background-color: var(--danger-bg-color);
 }
 .message-success,
-.btn-success{
+.btn-success,
+.table-success tr{
     border-color: var(--success-border-color);
     background-color: var(--success-bg-color);
 }
 
 .message-warning,
-.btn-warning{
+.btn-warning,
+.table-warning tr{
     border-color: var(--warning-border-color);
     background-color: var(--warning-bg-color);
+}
+
+/* gérer le "dépassement de contenu d'une boîte avec overflow */
+.table-responsive{
+    overflow-x: auto;
 }
 
 /* Déclaration selon la structure de la page */
@@ -389,12 +417,24 @@ body{
     margin: 0;
 }
 
+body > header > *,
+body > nav > *,
+main > header,
+main > aside,
+section > header,
+section article,
+body > footer > *{
+    padding-left: var(--gouttiere);
+    padding-right: var(--gouttiere);
+}
+
 body > header,
 body > nav{
     background-color: var(--header-bg-color);
     color: var(--header-color);
     padding: 10px 0;
 }
+
 
 body > nav ul{
     list-style-type: none;
@@ -421,4 +461,83 @@ body > nav a:focus-visible{
     outline: none;
 }
 
+/* css pour le print */
+
+@media print {
+    :root{
+        font-family: unset;
+        font-size: unset;
+        line-height: unset;
+    }
+
+    body > nav{
+        display: none;
+    }
+}
+
 /* Déclarations pour l'adaptatif */
+/*
+les points de ruptures les plus utilisés en adaptatif
+
+la plupart des css adaptatifs reprennent ceux proposés par bootstrap
+
+|min-width (largeur de l'écran)     | largeur du contenu a "restreindre"|
+|-----------------------------------|-----------------------------------|
+|smartphone < 576px                 |   100% de l'espace disponible     |
+|small <= 576px => sm               |   540px de l'espace disponible    |
+|medium <= 768px  => md             |   720px de l'espace disponible    |
+|large <= 992px   => lg             |   960px de l'espace disponible    |
+|extra-large <= 1200px => xl        |   1140px de l'espace disponible   |
+|extra-extra-large <= 1400px => xxl |   1320px de l'espace disponible   |
+|-----------------------------------|-----------------------------------|
+
+*/
+
+@media screen and (min-width: 576px) {
+    .container{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container{
+        width: 960px;
+    }
+
+    body > nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav li{
+        border-top: unset;
+        border-right: 1px solid var(--header-color);
+    }
+
+    body > nav li:last-child{
+        border-right: unset;
+    }
+
+    body > nav a{
+        padding-left: var(--gouttiere);
+        padding-right: var(--gouttiere);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container{
+        width: 1320px;
+    }
+}
