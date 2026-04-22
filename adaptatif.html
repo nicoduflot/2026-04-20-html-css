@@ -248,6 +248,67 @@
                     <div class="div-grid border">grid-14</div>
                 </div>
                 <h5>modèle d'aires</h5>
+                <style>
+                    .ex-areas{
+                        display: grid;
+                        grid-template-columns: 250px auto;
+                        grid-template-areas: 
+                        'header-area header-area'
+                        'main-area main-area'
+                        'colonne-area colonne-area'
+                        'footer-area footer-area'
+                        ;
+                    }
+
+                    .header-area{
+                        grid-area: header-area;
+                    }
+                    
+                    .main-area{
+                        grid-area: main-area;
+                    }
+                    
+                    .colonne-area{
+                        grid-area: colonne-area;
+                    }
+                    
+                    .footer-area{
+                        grid-area: footer-area;
+                    }
+
+                    @media screen and (min-width: 900px) {
+                        .ex-areas{
+                            grid-template-areas: 
+                                'header-area header-area'
+                                'colonne-area main-area'
+                                'footer-area footer-area'
+                            ;
+                        }
+                    }
+
+                </style>
+                <div class="ex-areas border">
+                    <div class="header-area border">
+                        <p>
+                            header
+                        </p>
+                    </div>
+                    <div class="main-area border">
+                        <p>
+                            main
+                        </p>
+                    </div>
+                    <div class="colonne-area border">
+                        <p>
+                            colonne
+                        </p>
+                    </div>
+                    <div class="footer-area border">
+                        <p>
+                            footer
+                        </p>
+                    </div>
+                </div>
             </article>
         </section>
     </main>
