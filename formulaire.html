@@ -17,10 +17,9 @@
     <nav role="navigation">
         <div>
             <ul>
-                <li><a href="./index.html" title="Introduction HTML - CSS" aria-current="page"
-                        target="_self">Introduction HTML - CSS</a></li>
+                <li><a href="./index.html" title="Introduction HTML - CSS" target="_self">Introduction HTML - CSS</a></li>
                 <li><a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a></li>
-                <li><a href="./formulaire.html" title="Les formulaires en HTML - CSS" target="_self">Contact</a></li>
+                <li><a href="./formulaire.html" title="Les formulaires en HTML - CSS" target="_self" aria-current="page">Contact</a></li>
                 <li><a href="./adaptatif.html" title="Le CSS Adaptatif" target="_self">CSS Adaptatif</a></li>
                 <li><a href="./animations.html" title="Les animations en HTML - CSS" target="_self">Animations</a></li>
                 <li><a href="./bootstrap.html" title="Le framework CSS bootstrap" target="_self">Bootstrap</a></li>
@@ -112,8 +111,8 @@
             </article>
             <h3 id="exemple-formulaire">Exemple de formulaire</h3>
             <article>
-                <h4>Contact</h4>
-                <form method="get" action="./formulaire.html">
+                <form method="get" action="./formulaire.html" class="contact-form">
+                    <h4>Contact</h4>
                     <fieldset>
                         <legend>Informations personnelles</legend>
                         <p>
@@ -140,13 +139,13 @@
                         <p>
                             <label for="email">Email :</label> <input type="email" name="email" id="email" required aria-describedby="info-email" placeholder="Entrez votre email" pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
                         </p>
-                        <div id="info-email">
+                        <div id="info-email" class="message message-info">
                             Veuillez entrer un email valide, ce champ est obligatoire.
                         </div>
                         <p>
                             <label for="age-legal">Votre âge :</label> <input type="number" name="age-legal" id="age-legal" required aria-describedby="info-age-legal" min="13" max="99" />
                         </p>
-                        <div id="info-age-legal">
+                        <div id="info-age-legal" class="message message-info">
                             Veuillez indiquez votre âge, l'âge légal minimum pour nous faire une demande est 13 ans, ce champ est obligatoire.
                         </div>
                     </fieldset>
@@ -169,7 +168,7 @@
                                 </optgroup>
                             </select>
                         </p>
-                        <div id="info-type-demande">
+                        <div id="info-type-demande" class="message message-info">
                             Veuillez sélectionner le type de demande, ce champ est obligatoire
                         </div>
                         <p>
@@ -182,7 +181,7 @@
                             <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-personne" /> 
                             <label for="morale">Personne morale</label><br />
                         </p>
-                        <div id="info-personne">
+                        <div id="info-personne" class="message message-info">
                             Veuillez indiquez si vous faîte la demande en votre nom (perticulier) ou pour une personne morale (entreprise, institution, association, etc.)
                         </div>
                         <p>
@@ -194,9 +193,24 @@
                             <input type="checkbox" name="diff-radio" id="diff-radio" value="radio" aria-describedby="info-diff" /> <label for="diff-radio">Pub radio</label><br />
                             <input type="checkbox" name="diff-tele" id="diff-tele" value="tele" aria-describedby="info-diff" /> <label for="diff-tele">Pub TV</label><br />
                         </p>
+                        <div id="info-message" class="message message-info">
+                            Choisissez votre modèle de diffusion, si aucun modèle n'est choisi, un commercial vous contactera.
+                        </div>
+                        <p>
+                            <label for="message">Votre message</label><br />
+                            <textarea name="message" id="message" placeholder="Votre demande ici" aria-describedby="info-message" required></textarea>
+                        </p>
+                        <div id="info-message" class="message message-info">
+                            Veuillez préciser les particularité de votre demande, ce champ est obligatoire.
+                        </div>
                     </fieldset>
                     <p>
                         <button type="submit" class="btn btn-success">Envoyer</button>
+                        <button type="reset" class="btn btn-warning">Effacer le formulaire</button>
+                        <button type="button" class="btn btn-info">bouton</button>
+                        <button type="button" class="btn btn-danger">bouton</button>
+                        <button type="button" class="btn btn-dark">bouton</button>
+                        <button type="button" class="btn btn-light">bouton</button>
                     </p>
                 </form>
             </article>

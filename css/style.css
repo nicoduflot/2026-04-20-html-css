@@ -182,6 +182,48 @@ quand un élément q est survolé, la police de caractère devient rouge et la c
     box-sizing: border-box;
 }
 
+/* Les éléments de formulaire */
+
+form.contact-form{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form input:focus,
+.contact-form input:focus-visible{
+    outline-color:var(--info-border-color);
+}
+
+.contact-form input:valid, 
+.contact-form select:valid,
+.contact-form textarea:valid{
+    border-color: var(--success-bg-color);
+}
+
+.contact-form input:invalid, 
+.contact-form select:invalid,
+.contact-form textarea:invalid{
+    border-color: var(--danger-bg-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea{
+    border-style: solid;
+    border-radius: calc( var(--gouttiere) / 4 );
+    border-width: 2px;
+    font-size: var(--site-font-size);
+    height: var(--site-line-height);
+}
+
+.contact-form textarea{
+    width: 100%;
+    height: 25vh;
+}
+
 
 /* Déclaration de classes */
 
@@ -308,20 +350,24 @@ figure.media-legend figcaption{
     opacity: 0.8;
 }
 
-.message-info{
+.message-info,
+.btn-info{
     border-color: var(--info-border-color);
     background-color: var(--info-bg-color);
 }
-.message-light{
+.message-light,
+.btn-light{
     border-color: var(--light-border-color);
     background-color: var(--light-bg-color);
 }
-.message-dark{
+.message-dark,
+.btn-dark{
     border-color: var(--dark-border-color);
     background-color: var(--dark-bg-color);
     color: var(--dark-color);
 }
-.message-danger{
+.message-danger,
+.btn-danger{
     border-color: var(--danger-border-color);
     background-color: var(--danger-bg-color);
 }
@@ -331,7 +377,8 @@ figure.media-legend figcaption{
     background-color: var(--success-bg-color);
 }
 
-.message-warning{
+.message-warning,
+.btn-warning{
     border-color: var(--warning-border-color);
     background-color: var(--warning-bg-color);
 }
