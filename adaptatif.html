@@ -17,10 +17,12 @@
     <nav role="navigation">
         <div>
             <ul>
-                <li><a href="./index.html" title="Introduction HTML - CSS" target="_self">Introduction HTML - CSS</a></li>
+                <li><a href="./index.html" title="Introduction HTML - CSS" target="_self">Introduction HTML - CSS</a>
+                </li>
                 <li><a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a></li>
                 <li><a href="./formulaire.html" title="Les formulaires en HTML - CSS" target="_self">Contact</a></li>
-                <li><a href="./adaptatif.html" title="Le CSS Adaptatif" target="_self" aria-current="page">CSS Adaptatif</a></li>
+                <li><a href="./adaptatif.html" title="Le CSS Adaptatif" target="_self" aria-current="page">CSS
+                        Adaptatif</a></li>
                 <li><a href="./animations.html" title="Les animations en HTML - CSS" target="_self">Animations</a></li>
                 <li><a href="./bootstrap.html" title="Le framework CSS bootstrap" target="_self">Bootstrap</a></li>
             </ul>
@@ -46,11 +48,85 @@
         </aside>
         <section>
             <header>
-                <h2 id=""></h2>
-                <h3 id=""></h3>
+                <h2 id="rwd">RWD : Responsive Web design</h2>
+                <h3 id="smartphone-first">Smartphone first</h3>
             </header>
             <article>
-                <h4></h4>
+                <h4>Principes</h4>
+                <p>
+                    Le CSS dit adaptatif (ou plus communément appelé RWD - Responsive Web Design) permet d'adapter
+                    l'affichage d'un site sur selon l'appareil utilisé.
+                </p>
+                <p>
+                    Donc, un site s'affichant correctement sur smartphone (en prenant en compte la lisibilité et
+                    l'accessibilité) doit pouvoir s'adapter sous une forme différente sur des écrans plus grands
+                    (tablette ou PC)
+                </p>
+                <p>
+                    Pour ce faire, on va écrire dans le CSS des surcharges ou des nouvelles règles CSS quand la
+                    largeur
+                    de l'écran atteint ou dépasse une largeur définie, en utilisant les <code>media queries</code>
+                </p>
+            </article>
+            <article>
+                <h4>Les media-queries</h4>
+                <p>
+                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                    autres, à l'affichage du site sur l'appareil : largeur d'affichage (viewport), l'orientation
+                    (portrait ou paysage), etc.
+                </p>
+                <p>
+                    Il est recommandé d'écrire le CSS d'un site en smartphone-first. La plupart des visiteurs de
+                    site
+                    naviguent à l'aide d'un smartphone. De plus le CSS de base sans media-queries est déstiné
+                    uniquement
+                    à l'affichage sur smartphone. Cela permet d'écrire quasiement tout le CSS d'un site, les
+                    surcharges
+                    ou ajouts de CSS dans les media-queries ne représentant qu'une partie infime du fichier CSS
+                    total.
+                </p>
+                <p>
+                    Si on fait la mise en page en premier lieu pour un écran plus grand, les réécriture et surcharge
+                    de
+                    CSS seront beaucoup plus importante, ce qui génèrera un fichier CSS très gros et surtout très
+                    difficile à maintenir.
+                </p>
+            </article>
+            <article>
+                <h4>La propriété float</h4>
+                <p>
+                        Elle permet de faire "flotter" un élément sur la gauche ou sur la droite du parent où il a été
+                        déclaré
+                    </p>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio sapiente molestias, dolor quos
+                        repellendus corrupti fuga sunt, itaque ipsam praesentium deleniti ducimus eos facilis? Inventore
+                        aspernatur eligendi dignissimos voluptates error.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptas ad fugit
+                        dignissimos, aperiam, cumque iure voluptate id tempora consectetur labore voluptatum at unde, ex
+                        tenetur rem eligendi culpa? Quae?
+                    </p>
+                    <img src="./images/doc-signal-250w.png" alt="" />
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas amet reprehenderit, obcaecati possimus repellendus, porro dignissimos facere odio et magni mollitia quos, necessitatibus quae dolor dolore ratione beatae ducimus suscipit.
+                    </p>
+            </article>
+            <article>
+                <h4>Display : block, inline et inline-block dans un flux</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero reprehenderit nam asperiores, velit officia perspiciatis alias quasi deleniti esse perferendis labore dolorem rem. Deleniti hic unde quasi odit illum?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis eum autem laborum quibusdam? A quo, unde est, vero tenetur, voluptates sint nostrum consectetur incidunt iusto maxime debitis quod odit beatae!
+                </p>
+            </article>
+            <article>
+                <h4>Display flex</h4>
+            </article>
+            <article>
+                <h4>display grid</h4>
+                <h5>modèle de colonnes</h5>
+                <h5>modèle d'aires</h5>
             </article>
         </section>
     </main>
