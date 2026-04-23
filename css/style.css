@@ -411,6 +411,10 @@ figure.media-legend figcaption{
     overflow-x: auto;
 }
 
+.left{
+    display: block;
+}
+
 .flexbox{
     display: flex;
     flex-wrap: wrap;
@@ -557,6 +561,11 @@ la plupart des css adaptatifs reprennent ceux proposés par bootstrap
 @media screen and (min-width: 768px) {
     .container{
         width: 720px;
+    }
+
+    .left{
+        display: inline;
+        float: left;
     }
 }
 
