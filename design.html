@@ -37,15 +37,82 @@
         <aside>
             <span>Table des matières</span>
             <nav>
-                
+                <ul>
+                    <li><a href="#svg">Les SVG</a></li>
+                    <li><a href="#proprietes-background">Les propriétés background</a></li>
+                    <li><a href="#ombres-texte-boite">Ombres : texte et boîte</a></li>
+                </ul>
             </nav>
         </aside>
         <section>
-            <header>
-                <h2 id=""></h2>
-            </header>
             <article>
-                <h3 id=""></h3>
+                <header>
+                    <h2 id="les-svg">Les SVG</h2>
+                </header>
+                <p>
+                    SVG : Scalable Vector Graphic
+                </p>
+                <p>
+                    Il est possible soit d'appeler un svg comme une image
+                </p>
+                <img src="./images/no-logo-2.svg" alt="" />
+                <p>
+                    Un svg ne subit pas d'effet "flou" quand il est affiché plus grand que sa taille d'origine, car il
+                    s'agit en fait d'un fichier XML contenant un ensemble de balise à l'intérieur d'une balise
+                    <code>svg</code> qui définissent les formes, les couleurs de remplissage et de contour.
+                </p>
+                <p>
+                    Il est possible de les faire soi-même.
+                </p>
+                <svg width="100%" height="10">
+                    <polyline points="0,0 5,0 300,5 5,10 0,10" style="stroke:transparent; fill:darkred"></polyline>
+                </svg>
+                <p>
+                    Autre exemple :
+                </p>
+                <svg width="300" height="200">
+                    <rect width="100%" height="100%" fill="darkgreen" />
+                    <circle cx="100" cy="100" r="80" fill="darkred" />
+                    <circle cx="200" cy="100" r="80" fill="darkviolet" />
+                    <circle cx="150" cy="100" r="80" fill="gold" />
+                    <text x="150" y="120" fill="white" font-size="60px" text-anchor="middle" stroke="black">TOTO</text>
+                </svg>
+            </article>
+            <article>
+                <header>
+                    <h2 id="proprietes-background">Les propriétés background</h2>
+                </header>
+                <div class="badge-css">
+
+                </div>
+                <h3>Le principe du sprite</h3>
+                <p>
+                    Utiliser une image qui est en fait une composition de plusieurs images, de même dimension, l'image est appelée en image de fond d'un élément, et on indique des coordonnées pour sélectionner, selon une classe, une des images qui compose l'image principale.
+                </p>
+                <div class="vignette vignette-1"></div>
+                <div class="vignette vignette-2"></div>
+                <div class="vignette vignette-3"></div>
+                <div class="vignette vignette-4"></div>
+            </article>
+            <article>
+                <header>
+                    <h2 id="ombres-texte-boite">Ombres : texte et boîte</h2>
+                </header>
+                <p>
+                    Exemples text-shadow
+                </p>
+                <div class="text-shadow text-shadow-1">
+                    Coucou !
+                </div>
+                <div class="text-shadow text-shadow-2">
+                    Coucou !
+                </div>
+                <p>
+                    Exemple box-shadow
+                </p>
+                <div class="atari">
+                    Atari
+                </div>
             </article>
         </section>
     </main>

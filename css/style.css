@@ -142,6 +142,7 @@ quand un élément q est survolé, la police de caractère devient rouge et la c
 /* Les imports de CSS dans un fichier CSS nécéssitent d^ter fait en tout premier, avant toutes autres déclarations CSS (hors commentaires et autres imports) */
 @import url('./bootstrap-icons.css');
 @import url('./LazenbyCompSmooth.css');
+@import url('./design.css');
 
 /* Déclarations du :root */
 
