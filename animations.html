@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les animations en HTML - CSS | Formation HTML - CSS</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" media="screen" href="./css/animate.css" />
 </head>
 
 <body>
@@ -57,7 +58,7 @@
             </header>
             <article>
                 <h3 id="ready-made">Les animations "ready-made"</h3>
-                <h4>Animate CSS</h4>
+                <h4 class="animate__animated animate__bounce animate__infinite">Animate CSS</h4>
                 <p>
                     Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de
                     récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre
@@ -66,14 +67,37 @@
                 <p>
                     <a href="https://animate.style/" target="_blank">L'exemple précédent utilise animate.css</a>
                 </p>
+                <p>
+                    <button id="btn-animation" class="btn btn-light">Faire bouger "coucou"</button>
+                </p>
+                <p id="animation-cible">
+                    Coucou !
+                </p>
+                <script>
+                    /* Récupérer l'élément bouton */
+                    const btnAnim = document.getElementById('btn-animation');
+                    console.log(btnAnim.classList);
+                    /* Récupérer l'élément paragraphe a animer */
+                    const pAnimate = document.getElementById;('animation-cible');
+                    /* on surveille si un clic est fait sur bouton */
+                    btnAnim.addEventListener('click', function(){
+                        /* au clic, on ajoute les classes animate au paragraphe */
+                        pAnimate.classList.add('animate__animated', 'animate__bounce', 'animate__repeat-1');
+                        /* Quand une animation se termine sur un élément, l'élément renvoie un événement : 'animationend' */
+                        pAnimate.addEventListener('animationend', function(){
+                            /* on retire du paragraphe animé les classes d'animation */
+                            pAnimate.classList.remove('animate__animated', 'animate__bounce', 'animate__repeat-1');
+                        });
+                    });
+                </script>
             </article>
             <article>
                 <h3 id="d-i-y-transitions">Les animations D.I.Y. les transitions</h3>
-                <p>
+                <p class="translation">
                     Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une
                     transition, on programme la ou les animations et / ou transformations dans cette transition.
                 </p>
-                <p>
+                <p class="scale-border">
                     Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des
                     transition et / ou transformations.
                 </p>

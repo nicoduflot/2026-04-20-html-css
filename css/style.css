@@ -470,6 +470,27 @@ figure.media-legend figcaption{
     align-self: flex-end;
 }
 
+/* classe animations (jour 4) */
+.translation{
+    /* on prépare le type d'animation ou de transformation qu'on va faire à l'élémnet ayant cette classe */
+    transition: transform 0.5s;
+}
+
+.translation:hover{
+    transform: translate(10px, 10px);
+}
+
+.scale-border{
+    transition: transform 2s, border 1s;
+    border: 0px dashed red;
+}
+
+.scale-border:hover{
+    transform: scale(1.1);
+    border-width: 2px;
+    background-color: var(--danger-bg-color);
+}
+
 /* Déclaration selon la structure de la page */
 
 body{
