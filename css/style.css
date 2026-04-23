@@ -491,6 +491,64 @@ figure.media-legend figcaption{
     background-color: var(--danger-bg-color);
 }
 
+.espace-animation{
+    width: 100%;
+    padding-bottom: 30%;
+    height: 0;
+    position: relative;
+    border: 1px solid black;
+}
+
+.cercle-anime{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: darkorange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation{
+    /* description de l'animation */
+    /*
+    animation c'est une propriété raccourcie
+    animation-name              : nom de l'animation
+    animation-duration          : durée de l'animation
+    animation-timing-function   : la vitesse constante ou non de l'animation
+    animation-delay             : le délais avant que l'animation soit jouée
+    animation-iteration-count   : le nombre de fois que se joue l'animation
+    animation-direction         : le "sens" de l'animation (on commence par la première vers la dernière image clef ou l'inverse)
+    */
+    animation-name: cercle-qui-bouge;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* Une fois qu'on a programmé l'animation, il faut définir ses images-clefs */
+
+@keyframes cercle-qui-bouge{
+    0%{
+        left: 0%;
+        top: 25%;
+        transform: rotate(0deg);
+    }
+    20%{
+        top: 0%;
+    }
+    50%{
+        left: 75%;
+        top: 25%;
+        transform: rotate(360deg);
+    }
+    100%{
+        left: 0%;
+        top: 25%;
+    }
+}
+
 /* Déclaration selon la structure de la page */
 
 body{
