@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les animations en HTML - CSS | Formation HTML - CSS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <header role="banner">
+        <div class="container">
+            <span>Formation HTML - CSS</span>
+        </div>
+    </header>
+    <nav role="navigation">
+        <div class="container">
+            <ul>
+                <li><a href="./index.html" title="Introduction HTML - CSS" target="_self">Introduction HTML - CSS</a>
+                </li>
+                <li><a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a></li>
+                <li><a href="./formulaire.html" title="Les formulaires en HTML - CSS" target="_self"
+                        aria-current="page">Contact</a></li>
+                <li><a href="./adaptatif.html" title="Le CSS Adaptatif" target="_self">CSS Adaptatif</a></li>
+                <li><a href="./animations.html" title="Les animations en HTML - CSS" target="_self">Animations</a></li>
+                <li><a href="./bootstrap.html" title="Le framework CSS bootstrap" target="_self">Bootstrap</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <header>
+            <h1>Les animations en HTML - CSS</h1>
+        </header>
+        <aside>
+            <span>Table des matières</span>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#animer-en-css" title="Aller à la section animer en CSS">Animer en CSS</a>
+                        <ul>
+                            <li><a href="#ready-made"
+                                    title="Aller à la section récupérer les animations ready made">Récupérer les
+                                    données</a></li>
+                            <li><a href="#d-i-y-transitions" title="Aller à la section D.I.Y. les transitions">D.I.Y.
+                                    les transitions</a></li>
+                            <li><a href="#d-i-y-keyframes" title="Aller à la section D.I.Y. les keyframes">D.I.Y. les
+                                    transitions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <section>
+            <header>
+                <h2 id="animer-en-css">Animer en CSS</h2>
+            </header>
+            <article>
+                <h3 id="ready-made">Les animations "ready-made"</h3>
+                <h4>Animate CSS</h4>
+                <p>
+                    Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de
+                    récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre
+                    précis.
+                </p>
+                <p>
+                    <a href="https://animate.style/" target="_blank">L'exemple précédent utilise animate.css</a>
+                </p>
+            </article>
+            <article>
+                <h3 id="d-i-y-transitions">Les animations D.I.Y. les transitions</h3>
+                <p>
+                    Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une
+                    transition, on programme la ou les animations et / ou transformations dans cette transition.
+                </p>
+                <p>
+                    Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des
+                    transition et / ou transformations.
+                </p>
+                <p>
+                    on utilise soit la propriété raccourcie transition, qui peut être décomposée par :
+                </p>
+                <ul>
+                    <li>transition-property: la propriété CSS subissant la transition</li>
+                    <li>transition-duration: la durée de la transition en seconde</li>
+                    <li>transition-timing-function: la façon dont la transition se fait (le "mouvement" à l'écran)
+                    </li>
+                    <li>transition-delay: le délais d'attente avant le lancement de la transition</li>
+                </ul>
+            </article>
+            <article>
+                <h3 id="d-i-y-keyframes">Les animations D.I.Y. les keyframes</h3>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            &copy; DAWAN - 2026
+        </div>
+    </footer>
+</body>
+
+</html>
