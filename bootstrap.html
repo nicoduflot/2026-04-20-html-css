@@ -209,61 +209,103 @@
                         Your browser does not support the video tag.
                     </video>
                     <div class="custom-controls">
-                        <button class="btn btn-light btn-sm" id="playPauseBtn"><i class="bi bi-play-fill"></i></button>
-                        <input type="range" class="form-range" id="progressBar" min="0" max="100" step="1" value="0">
-                        <button class="btn btn-light btn-sm" id="muteBtn"><i class="bi bi-volume-up-fill"></i></button>
-                        <button class="btn btn-light btn-sm" id="fullscreenBtn"><i
+                        <button class="btn btn-light btn-sm mx-1" id="playPauseBtn"><i class="bi bi-play-fill"></i></button>
+                        <input type="range" class="form-range mx-1" id="progressBar" min="0" max="100" step="1" value="0">
+                        <button class="btn btn-light btn-sm mx-1" id="muteBtn"><i class="bi bi-volume-up-fill"></i></button>
+                        <button class="btn btn-light btn-sm mx-1" id="fullscreenBtn"><i
                                 class="bi bi-fullscreen"></i></button>
                     </div>
                 </div>
                 <h2 class="mb-3">Video Title</h2>
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel
                     consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.</p>
-                <script>
-                    const video = document.getElementById('videoPlayer');
-                    const playPauseBtn = document.getElementById('playPauseBtn');
-                    const progressBar = document.getElementById('progressBar');
-                    const muteBtn = document.getElementById('muteBtn');
-                    const fullscreenBtn = document.getElementById('fullscreenBtn');
-
-                    playPauseBtn.addEventListener('click', () => {
-                        if (video.paused) {
-                            video.play();
-                            playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
-                        } else {
-                            video.pause();
-                            playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
-                        }
-                    });
-
-                    video.addEventListener('timeupdate', () => {
-                        const progress = (video.currentTime / video.duration) * 100;
-                        progressBar.value = progress;
-                    });
-
-                    progressBar.addEventListener('input', () => {
-                        const time = (progressBar.value / 100) * video.duration;
-                        video.currentTime = time;
-                    });
-
-                    muteBtn.addEventListener('click', () => {
-                        video.muted = !video.muted;
-                        muteBtn.innerHTML = video.muted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
-                    });
-
-                    fullscreenBtn.addEventListener('click', () => {
-                        if (video.requestFullscreen) {
-                            video.requestFullscreen();
-                        } else if (video.mozRequestFullScreen) {
-                            video.mozRequestFullScreen();
-                        } else if (video.webkitRequestFullscreen) {
-                            video.webkitRequestFullscreen();
-                        } else if (video.msRequestFullscreen) {
-                            video.msRequestFullscreen();
-                        }
-                    });
-                </script>
             </div>
+            <div class="col-lg-4">
+                <h3 class="mb-3">Playlist</h3>
+                <ul class="list-group">
+                    <li class="list-group-item playlist-item active" data-videosrc="./media/video/Fallout-4-Launch-Trailer.mp4">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Trailler Fallout 4</h5>
+                            <small>3:45</small>
+                        </div>
+                        <p class="mb-1">Short description of video 1.</p>
+                    </li>
+                    <li class="list-group-item playlist-item" data-videosrc="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Bunny</h5>
+                            <small>2:30</small>
+                        </div>
+                        <p class="mb-1">Short description of video 2.</p>
+                    </li>
+                    <li class="list-group-item playlist-item" data-videosrc="./media/audio/diablo_town.mp3">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Diable</h5>
+                            <small>2:30</small>
+                        </div>
+                        <p class="mb-1">Fichier audio, pas de vidéo</p>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                const video = document.getElementById('videoPlayer');
+                const playPauseBtn = document.getElementById('playPauseBtn');
+                const progressBar = document.getElementById('progressBar');
+                const muteBtn = document.getElementById('muteBtn');
+                const fullscreenBtn = document.getElementById('fullscreenBtn');
+                const playlistItems = document.querySelectorAll('li.playlist-item');
+                /*console.log(playlistItems);*/
+                
+                playPauseBtn.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                        playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+                    } else {
+                        video.pause();
+                        playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                    }
+                });
+
+                video.addEventListener('timeupdate', () => {
+                    const progress = (video.currentTime / video.duration) * 100;
+                    progressBar.value = progress;
+                });
+
+                progressBar.addEventListener('input', () => {
+                    const time = (progressBar.value / 100) * video.duration;
+                    video.currentTime = time;
+                });
+
+                muteBtn.addEventListener('click', () => {
+                    video.muted = !video.muted;
+                    muteBtn.innerHTML = video.muted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
+                });
+
+                fullscreenBtn.addEventListener('click', () => {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.mozRequestFullScreen) {
+                        video.mozRequestFullScreen();
+                    } else if (video.webkitRequestFullscreen) {
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) {
+                        video.msRequestFullscreen();
+                    }
+                });
+
+
+                playlistItems.forEach(function(item){
+                    item.addEventListener('click', function(){
+                        /*console.log(item.dataset.videosrc);*/
+                        video.setAttribute('src', item.dataset.videosrc);
+                        video.currentTime = 0;
+                        progressBar.value = 0;
+                        playlistItems.forEach(function(item){
+                            item.classList.remove('active');
+                        });
+                        item.classList.add('active');
+                    });
+                });
+            </script>
         </section>
     </main>
     <footer class="bg-dark text-white" data-bs-theme="dark">
