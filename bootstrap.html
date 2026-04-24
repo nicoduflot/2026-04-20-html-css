@@ -9,6 +9,7 @@
     <script src="./js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
     <link rel="stylesheet" href="./css/cs-bootstrap.css" />
+    <script src="./js/player.js"></script>
 </head>
 
 <body>
@@ -202,6 +203,12 @@
             </div>
         </section>
         <section class="row g-1 py-1">
+            <header>
+                <h2>Video player</h2>
+                <p>
+                    Un lecteur vidéo inspiré de <a href="https://bootstrapexamples.com/@kemaya/bootstrap-video-player" target="_blank">Bootstrap examples</a>
+                </p>
+            </header>
             <div class="col-lg-8">
                 <div class="ratio ratio-16x9 mb-4">
                     <video id="videoPlayer">
@@ -216,7 +223,7 @@
                                 class="bi bi-fullscreen"></i></button>
                     </div>
                 </div>
-                <h2 class="mb-3">Trailler Fallout 4</h2>
+                <h3 class="mb-3">Trailler Fallout 4</h3>
                 <p class="mb-4">Short description of video 1.</p>
             </div>
             <div class="col-lg-4">
@@ -224,87 +231,27 @@
                 <ul class="list-group">
                     <li class="list-group-item playlist-item active" data-videosrc="./media/video/Fallout-4-Launch-Trailer.mp4">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Trailler Fallout 4</h5>
+                            <h4 class="mb-1">Trailler Fallout 4</h4>
                             <small>3:45</small>
                         </div>
                         <p class="mb-1">Short description of video 2.</p>
                     </li>
                     <li class="list-group-item playlist-item" data-videosrc="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Bunny</h5>
+                            <h4 class="mb-1">Bunny</h4>
                             <small>2:30</small>
                         </div>
                         <p class="mb-1">Short description of video 3.</p>
                     </li>
                     <li class="list-group-item playlist-item" data-videosrc="./media/audio/diablo_town.mp3">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Diable</h5>
+                            <h4 class="mb-1">Diable</h4>
                             <small>2:30</small>
                         </div>
                         <p class="mb-1">Fichier audio, pas de vidéo</p>
                     </li>
                 </ul>
             </div>
-            <script>
-                const video = document.getElementById('videoPlayer');
-                const playPauseBtn = document.getElementById('playPauseBtn');
-                const progressBar = document.getElementById('progressBar');
-                const muteBtn = document.getElementById('muteBtn');
-                const fullscreenBtn = document.getElementById('fullscreenBtn');
-                const playlistItems = document.querySelectorAll('li.playlist-item');
-                /*console.log(playlistItems);*/
-                
-                playPauseBtn.addEventListener('click', () => {
-                    if (video.paused) {
-                        video.play();
-                        playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
-                    } else {
-                        video.pause();
-                        playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
-                    }
-                });
-
-                video.addEventListener('timeupdate', () => {
-                    const progress = (video.currentTime / video.duration) * 100;
-                    progressBar.value = progress;
-                });
-
-                progressBar.addEventListener('input', () => {
-                    const time = (progressBar.value / 100) * video.duration;
-                    video.currentTime = time;
-                });
-
-                muteBtn.addEventListener('click', () => {
-                    video.muted = !video.muted;
-                    muteBtn.innerHTML = video.muted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
-                });
-
-                fullscreenBtn.addEventListener('click', () => {
-                    if (video.requestFullscreen) {
-                        video.requestFullscreen();
-                    } else if (video.mozRequestFullScreen) {
-                        video.mozRequestFullScreen();
-                    } else if (video.webkitRequestFullscreen) {
-                        video.webkitRequestFullscreen();
-                    } else if (video.msRequestFullscreen) {
-                        video.msRequestFullscreen();
-                    }
-                });
-
-
-                playlistItems.forEach(function(item){
-                    item.addEventListener('click', function(){
-                        /*console.log(item.dataset.videosrc);*/
-                        video.setAttribute('src', item.dataset.videosrc);
-                        video.currentTime = 0;
-                        progressBar.value = 0;
-                        playlistItems.forEach(function(item){
-                            item.classList.remove('active');
-                        });
-                        item.classList.add('active');
-                    });
-                });
-            </script>
         </section>
     </main>
     <footer class="bg-dark text-white" data-bs-theme="dark">

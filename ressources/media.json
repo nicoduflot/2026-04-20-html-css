@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Trailer Fallout 4",
+        "src": "media/video/Fallout-4-Launch-Trailer.mp4",
+        "type": "video"
+    },
+    {
+        "title": "Bunny",
+        "src": "media/video/Big_Buck_Bunny_360_10s_1MB.mp4",
+        "type": "video"
+    },
+    {
+        "title": "Diablo Town",
+        "src": "media/audio/diablo_town.mp3",
+        "type": "audio"
+    }
+]
