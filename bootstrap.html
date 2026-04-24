@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap | Formation HTML - CSS</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <script src="./js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+</head>
+
+<body>
+    <header class="py-1 bg-dark text-white" data-bs-theme="dark">
+        <div class="container">
+            <span class="h1">Bootstrap</span>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./images/no-logo-white.svg" style="width: 100px;" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./index.html" title="Introduction HTML - CSS"
+                            target="_self">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./media.html" title="Les media en HTML - CSS"
+                            target="_self">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./formulaire.html"
+                            title="Les formulaires en HTML - CSS" target="_self">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./adaptatif.html" title="Le CSS Adaptatif"
+                            target="_self">CSS Adaptatif</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./animations.html"
+                            title="Les animations en HTML - CSS" target="_self">Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./design.html" title="Des astuces CSS"
+                            target="_self">Astuces CSS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./bootstrap.html"
+                            title="Le framework CSS bootstrap" target="_self" aria-current="page">Bootstrap</a></li>
+                </ul>
+                <!--
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                -->
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div id="carouselExample" class="carousel slide bg-dark" data-bs-theme="dark">
+            <div class="carousel-inner ratio ratio-16x9">
+                <figure class="carousel-item active">
+                    <div class="h-100 d-flex align-items-center">
+                        <img src="./images/synthwave-vibe-james-white-signalnoise-w400.png" class="d-block mx-auto mh-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block bg-light bg-opacity-50">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </figure>
+                <figure class="carousel-item ">
+                    <div class="h-100 d-flex align-items-center">
+                        <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="d-block mx-auto mh-100"
+                        alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block bg-light bg-opacity-50">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </figure>
+                <figure class="carousel-item ">
+                    <div class="h-100 d-flex align-items-center">
+                        <img src="./images/james-white-composite-800w.png" class="d-block mx-auto mh-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block bg-light bg-opacity-50">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </figure>
+                <figure class="carousel-item ">
+                    <div class="h-100 d-flex align-items-center">
+                        <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" class="d-block mx-auto mh-100"
+                        alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block bg-light bg-opacity-50">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </figure>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+    <footer class="bg-dark text-white" data-bs-theme="dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Qui sommes nous ?</a></li>
+                            <li><a href="#">L'équipe</a></li>
+                            <li><a href="#">CGU</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-6">
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Nos clients</a></li>
+                            <li><a href="#">Nos partenaires</a></li>
+                            <li><a href="#">Mécénat</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <p>
+                        &copy; DAWAN - 2026
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
